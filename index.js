@@ -1,4 +1,3 @@
-#!/usr/bin/env zx
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const http = require('https');
