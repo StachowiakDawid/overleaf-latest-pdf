@@ -26,7 +26,6 @@ const download = (url, dest, session) => {
     waitUntil: 'networkidle0',
   });
   const href = await page.evaluate(() => document.querySelector('div.toolbar-pdf-left a.btn').href.replace('&popupDownload=true', ''));
-  console.log(href);
   const cookies = await page.cookies();
   download(href, process.argv[3], cookies.filter(el => el.name.includes('overleaf_session'))[0]);
   await browser.close();
